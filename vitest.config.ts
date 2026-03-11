@@ -24,6 +24,9 @@ export default defineConfig({
         "src/**/*.spec.{ts,tsx}",
         "src/main.tsx",
         "src/vite-env.d.ts",
+        "src/App.tsx",
+        "src/pages/**",
+        "src/components/**",
       ],
       thresholds: {
         statements: 70,
