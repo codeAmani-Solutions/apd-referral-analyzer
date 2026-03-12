@@ -1,21 +1,17 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-
-function Placeholder({ name }: { name: string }) {
-  return (
-    <div className="flex min-h-screen items-center justify-center bg-canvas-deep">
-      <h1 className="text-h2 font-semibold text-text-primary">{name}</h1>
-    </div>
-  );
-}
+import Dashboard from "@/pages/Dashboard";
+import ReferralDetail from "@/pages/ReferralDetail";
+import Upload from "@/pages/Upload";
+import History from "@/pages/History";
 
 export default function App() {
   return (
     <BrowserRouter>
       <Routes>
-        <Route path="/" element={<Placeholder name="Dashboard" />} />
-        <Route path="/referral/:id" element={<Placeholder name="Referral Detail" />} />
-        <Route path="/upload" element={<Placeholder name="Upload" />} />
-        <Route path="/history" element={<Placeholder name="History" />} />
+        <Route path="/" element={<Dashboard />} />
+        <Route path="/referral/:id" element={<ReferralDetail />} />
+        <Route path="/upload" element={<Upload />} />
+        <Route path="/history" element={<History />} />
       </Routes>
     </BrowserRouter>
   );
