@@ -25,13 +25,13 @@ test.describe("Dashboard", () => {
 
   test("displays consumer name and referral ID from mock data", async ({ page }) => {
     await page.goto("/");
-    await expect(page.getByText("Justin Chacon")).toBeVisible();
+    await expect(page.getByText("Marcus Ellison")).toBeVisible();
     await expect(page.getByText("#71176")).toBeVisible();
   });
 
   test("clicking a referral card navigates to /referral/:id", async ({ page }) => {
     await page.goto("/");
-    await page.getByText("Justin Chacon").click();
+    await page.getByText("Marcus Ellison").click();
     await expect(page).toHaveURL("/referral/71176");
   });
 

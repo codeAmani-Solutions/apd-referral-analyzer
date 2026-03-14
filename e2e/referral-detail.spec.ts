@@ -11,7 +11,7 @@ test.describe("ReferralDetail", () => {
 
   test("renders consumer name and referral ID", async ({ page }) => {
     await page.goto("/referral/71176");
-    await expect(page.getByRole("heading", { name: "Justin Chacon" })).toBeVisible();
+    await expect(page.getByRole("heading", { name: "Marcus Ellison" })).toBeVisible();
     await expect(page.getByText("Referral #71176")).toBeVisible();
   });
 

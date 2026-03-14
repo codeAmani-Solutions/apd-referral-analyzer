@@ -1,11 +1,10 @@
 -- ============================================================================
 -- APD Referral Analyzer — Seed Data
 -- Run in Supabase SQL Editor to populate dev/test data.
--- Matches the prototype SAMPLE_REFERRAL_DATA (Justin Chacon #71176)
--- plus a second referral for dashboard/list testing.
+-- Two fictional referrals for dev/testing purposes.
 -- ============================================================================
 
--- 1) Provider (linked to a known auth user — replace user_id after first login)
+-- 1) Provider (linked to a known auth user)
 INSERT INTO providers (id, user_id, name, license_number, region, created_at, updated_at)
 VALUES (
   '3c845eb6-f073-48b7-ae37-cf5c13283e85',
@@ -18,7 +17,7 @@ VALUES (
 )
 ON CONFLICT (id) DO NOTHING;
 
--- 2) Referral #1 — Justin Chacon (primary seed)
+-- 2) Referral #1 — Marcus Ellison (primary seed)
 INSERT INTO referrals (
   id, provider_id, status, deadline,
   diagnoses, behavioral_notes, functional_notes,
@@ -47,8 +46,8 @@ INSERT INTO consumers (
 ) VALUES (
   'c1000000-0000-4000-8000-000000000001',
   '71176',
-  'Justin',
-  'Chacon',
+  'Marcus',
+  'Ellison',
   '1998-03-14',
   27,
   'Male',
@@ -57,7 +56,7 @@ INSERT INTO consumers (
   'Family Home',
   '1422 Sunridge Blvd, Orlando, FL 32801',
   '(407) 555-0193',
-  '{"type": "Plenary Guardian", "guardian": {"name": "Maria Chacon", "phone": "(407) 555-0194", "address": "1422 Sunridge Blvd, Orlando, FL 32801"}, "guardianship_types": ["Person", "Property"]}',
+  '{"type": "Plenary Guardian", "guardian": {"name": "Denise Ellison", "phone": "(407) 555-0194", "address": "1422 Sunridge Blvd, Orlando, FL 32801"}, "guardianship_types": ["Person", "Property"]}',
   '{"name": "Diana Morales", "id": "SC-20198", "title": "Support Coordinator", "region": "Central", "phone": "(407) 555-0210", "email": "d.morales@apdcares.org"}',
   '{"name": "Robert Singh", "id": "RC-40122", "title": "Referral Coordinator", "region": "Central", "phone": "(407) 555-0225", "email": "r.singh@apdcares.org"}',
   now()

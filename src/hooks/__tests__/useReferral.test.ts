@@ -26,8 +26,8 @@ const mockReferral = {
 const mockConsumer = {
   id: "cons-1",
   referral_id: "71176",
-  first_name: "Justin",
-  last_name: "Chacon",
+  first_name: "Marcus",
+  last_name: "Ellison",
   dob: "1990-05-12",
   age: 35,
   gender: "Male",
@@ -153,7 +153,7 @@ describe("useReferral", () => {
     expect(result.current.error).toBeNull();
     expect(result.current.data).not.toBeNull();
     expect(result.current.data!.referral.id).toBe("71176");
-    expect(result.current.data!.consumer?.first_name).toBe("Justin");
+    expect(result.current.data!.consumer?.first_name).toBe("Marcus");
     expect(result.current.data!.qsi_assessment?.overall_support_level).toBe(
       "Standard",
     );

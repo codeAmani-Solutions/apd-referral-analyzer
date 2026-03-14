@@ -29,8 +29,8 @@ export const MOCK_REFERRAL = {
 export const MOCK_CONSUMER = {
   id: "cons-seed-001",
   referral_id: "71176",
-  first_name: "Justin",
-  last_name: "Chacon",
+  first_name: "Marcus",
+  last_name: "Ellison",
   dob: "2007-12-22",
   age: null,
   gender: null,
@@ -52,7 +52,7 @@ export const MOCK_CONSUMER = {
  */
 export const MOCK_DASHBOARD_REFERRAL = {
   ...MOCK_REFERRAL,
-  consumers: { first_name: "Justin", last_name: "Chacon" },
+  consumers: { first_name: "Marcus", last_name: "Ellison" },
 };
 
 // ─── Auth injection ───────────────────────────────────────────────────────────
