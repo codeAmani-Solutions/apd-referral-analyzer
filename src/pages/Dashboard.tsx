@@ -68,10 +68,10 @@ export default function Dashboard() {
       <div className="space-y-4">
         {/* Header row */}
         <div className="flex items-center justify-between">
-          <h1 className="text-[22px] font-bold text-[#2d1e6b]">Active Referrals</h1>
+          <h1 className="text-[20px] sm:text-[22px] font-bold text-[#2d1e6b]">Active Referrals</h1>
           <Link
             to="/upload"
-            className="flex items-center gap-1.5 text-[13px] font-semibold text-white bg-[#4f35e0] px-3.5 py-1.5 rounded-full hover:bg-[#3d28b0] transition-colors"
+            className="flex items-center gap-1.5 text-[13px] font-semibold text-white bg-[#4f35e0] px-3.5 py-2.5 sm:py-1.5 rounded-full hover:bg-[#3d28b0] transition-colors min-h-[44px] sm:min-h-0"
           >
             <PlusCircle size={15} />
             New Upload
@@ -81,7 +81,7 @@ export default function Dashboard() {
         {/* Stat summary row */}
         {!loading && !error && (
           <FrostPanel>
-            <div className="grid grid-cols-3 divide-x divide-[#4f35e0]/10">
+            <div className="grid grid-cols-3 divide-x divide-[#4f35e0]/10 text-center">
               <StatCell label="Pending" count={statusCounts.pending} />
               <StatCell label="In Review" count={statusCounts.in_review} />
               <StatCell label="Eligible" count={statusCounts.eligible} />

@@ -52,7 +52,7 @@ export default function TabNav({ activeTab, onTabChange }: TabNavProps) {
             onClick={() => onTabChange(id)}
             aria-current={isActive ? "page" : undefined}
             className={[
-              "flex items-center gap-1.5 px-3 py-1.5 rounded-lg text-[12px] font-medium whitespace-nowrap transition-all duration-150",
+              "flex items-center gap-1.5 px-3 py-2.5 sm:py-1.5 rounded-lg text-[12px] font-medium whitespace-nowrap transition-all duration-150 min-h-[44px] sm:min-h-0",
               isActive
                 ? "bg-[#4f35e0] text-white shadow-sm"
                 : "text-[#5c5470] hover:bg-black/[0.05] hover:text-[#2d1e6b]",

@@ -66,7 +66,7 @@ export default function Login() {
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
                 disabled={loading}
-                className="w-full text-[13px] px-3 py-2 rounded-lg border border-black/10 bg-white/60 text-[#2d1e6b] placeholder-[#9990b8] focus:outline-none focus:ring-2 focus:ring-[#4f35e0]/40 disabled:opacity-50"
+                className="w-full text-[13px] px-3 py-3 sm:py-2 rounded-lg border border-black/10 bg-white/60 text-[#2d1e6b] placeholder-[#9990b8] focus:outline-none focus:ring-2 focus:ring-[#4f35e0]/40 disabled:opacity-50"
                 placeholder="you@example.com"
               />
             </div>
@@ -86,7 +86,7 @@ export default function Login() {
                 value={password}
                 onChange={(e) => setPassword(e.target.value)}
                 disabled={loading}
-                className="w-full text-[13px] px-3 py-2 rounded-lg border border-black/10 bg-white/60 text-[#2d1e6b] placeholder-[#9990b8] focus:outline-none focus:ring-2 focus:ring-[#4f35e0]/40 disabled:opacity-50"
+                className="w-full text-[13px] px-3 py-3 sm:py-2 rounded-lg border border-black/10 bg-white/60 text-[#2d1e6b] placeholder-[#9990b8] focus:outline-none focus:ring-2 focus:ring-[#4f35e0]/40 disabled:opacity-50"
                 placeholder="••••••••"
               />
             </div>
@@ -94,7 +94,7 @@ export default function Login() {
             <button
               type="submit"
               disabled={loading}
-              className="w-full text-[13px] font-semibold text-white bg-[#4f35e0] py-2.5 rounded-full hover:bg-[#3d28b0] transition-colors disabled:opacity-40 disabled:cursor-not-allowed"
+              className="w-full text-[13px] font-semibold text-white bg-[#4f35e0] py-3 sm:py-2.5 rounded-full hover:bg-[#3d28b0] transition-colors disabled:opacity-40 disabled:cursor-not-allowed min-h-[44px]"
             >
               {loading ? "Signing in…" : "Sign In"}
             </button>

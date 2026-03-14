@@ -14,7 +14,7 @@ export default function AppShell({ children, providerName }: AppShellProps) {
       <MeshBackground />
       <AuraOrbs />
       <Header providerName={providerName} />
-      <main className="flex-1 w-full max-w-4xl mx-auto px-4 py-6">
+      <main className="flex-1 w-full max-w-4xl mx-auto px-3 sm:px-4 lg:px-6 py-4 sm:py-6 pb-[env(safe-area-inset-bottom,0px)]">
         {children}
       </main>
       <Footer />

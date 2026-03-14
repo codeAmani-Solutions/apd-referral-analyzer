@@ -154,7 +154,7 @@ export default function Upload() {
                   placeholder="e.g. 71176"
                   required
                   disabled={step === "uploading"}
-                  className="w-full text-[13px] px-3 py-2 rounded-lg border border-black/10 bg-white/60 text-[#2d1e6b] placeholder-[#9990b8] focus:outline-none focus:ring-2 focus:ring-[#4f35e0]/40 disabled:opacity-50"
+                  className="w-full text-[13px] px-3 py-3 sm:py-2 rounded-lg border border-black/10 bg-white/60 text-[#2d1e6b] placeholder-[#9990b8] focus:outline-none focus:ring-2 focus:ring-[#4f35e0]/40 disabled:opacity-50"
                 />
               </div>
 
@@ -189,7 +189,7 @@ export default function Upload() {
                 <label
                   htmlFor="file-input"
                   className={[
-                    "flex flex-col items-center justify-center gap-2 w-full h-28 rounded-xl border-2 border-dashed cursor-pointer transition-colors",
+                    "flex flex-col items-center justify-center gap-2 w-full h-32 sm:h-28 rounded-xl border-2 border-dashed cursor-pointer transition-colors",
                     file
                       ? "border-[#4f35e0]/50 bg-[#4f35e0]/5"
                       : "border-black/10 bg-white/40 hover:border-[#4f35e0]/30",
@@ -227,7 +227,7 @@ export default function Upload() {
               <button
                 type="submit"
                 disabled={!file || !referralId.trim() || step === "uploading"}
-                className="w-full text-[13px] font-semibold text-white bg-[#4f35e0] py-2.5 rounded-full hover:bg-[#3d28b0] transition-colors disabled:opacity-40 disabled:cursor-not-allowed"
+                className="w-full text-[13px] font-semibold text-white bg-[#4f35e0] py-3 sm:py-2.5 rounded-full hover:bg-[#3d28b0] transition-colors disabled:opacity-40 disabled:cursor-not-allowed min-h-[44px]"
               >
                 {step === "uploading" ? "Processing…" : "Upload & Extract"}
               </button>
