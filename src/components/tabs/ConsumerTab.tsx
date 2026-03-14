@@ -1,4 +1,4 @@
-import { ReferralDetail, ContactPerson } from "@/lib/types";
+import type { ReferralDetail, ContactPerson } from "@/lib/types";
 import FrostPanel from "@/components/ui/FrostPanel";
 import SectionHeader from "@/components/ui/SectionHeader";
 import DataRow from "@/components/ui/DataRow";

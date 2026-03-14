@@ -1,5 +1,5 @@
 import { Calendar, Hash } from "lucide-react";
-import { ReferralDetail } from "@/lib/types";
+import type { ReferralDetail } from "@/lib/types";
 import FrostPanel from "@/components/ui/FrostPanel";
 import StatusBadge from "@/components/ui/StatusBadge";
 import StatBlock from "@/components/ui/StatBlock";

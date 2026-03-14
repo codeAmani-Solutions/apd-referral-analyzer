@@ -1,4 +1,4 @@
-import { ReferralDetail, DocumentType, DocumentStatus } from "@/lib/types";
+import type { ReferralDetail, DocumentType, DocumentStatus } from "@/lib/types";
 import FrostPanel from "@/components/ui/FrostPanel";
 import SectionHeader from "@/components/ui/SectionHeader";
 import AlertBox from "@/components/ui/AlertBox";

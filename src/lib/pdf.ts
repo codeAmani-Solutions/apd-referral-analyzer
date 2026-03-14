@@ -1,4 +1,5 @@
 import * as pdfjsLib from "pdfjs-dist";
+import type { TextItem } from "pdfjs-dist/types/src/display/api";
 
 // Configure pdf.js worker — Vite resolves the URL at build time
 pdfjsLib.GlobalWorkerOptions.workerSrc = new URL(
@@ -23,7 +24,7 @@ export async function extractTextFromPDF(file: File): Promise<string> {
     const page = await pdf.getPage(i);
     const content = await page.getTextContent();
     const text = content.items
-      .filter((item): item is { str: string } => "str" in item)
+      .filter((item): item is TextItem => "str" in item)
       .map((item) => item.str)
       .join(" ");
     pageTexts.push(text);

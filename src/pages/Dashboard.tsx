@@ -44,7 +44,7 @@ export default function Dashboard() {
       if (err) {
         setError(err.message);
       } else {
-        setReferrals((data as DashboardReferral[]) ?? []);
+        setReferrals((data as unknown as DashboardReferral[]) ?? []);
       }
       setLoading(false);
     }

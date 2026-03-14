@@ -22,6 +22,7 @@ export function useSupabase() {
       data: { subscription },
     } = supabase.auth.onAuthStateChange((_event, s) => {
       setSession(s);
+      setLoading(false);
     });
 
     return () => subscription.unsubscribe();

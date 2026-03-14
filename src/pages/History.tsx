@@ -42,7 +42,7 @@ export default function History() {
       if (err) {
         setError(err.message);
       } else {
-        setReferrals((data as HistoryReferral[]) ?? []);
+        setReferrals((data as unknown as HistoryReferral[]) ?? []);
       }
       setLoading(false);
     }
